@@ -2,7 +2,7 @@ name: Send Random Discord Message
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # runs every 30 minutes (UTC)
+    - cron: '*/9 * * * *'   # runs every 30 minutes (UTC)
   workflow_dispatch:          # allow manual run
 
 jobs:
