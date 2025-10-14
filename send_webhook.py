@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, random, time, requests, sys
+import os, random, requests, sys
 
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK")
 WEBHOOK_NAME = os.environ.get("WEBHOOK_NAME", "Morton Richard (Webhook Version)")
@@ -16,11 +16,6 @@ try:
 except FileNotFoundError:
     print("messages.txt not found.")
     sys.exit(2)
-
-# Wait random time (0–1800 seconds = 0–30 min)
-delay = random.randint(0, 1800)
-print(f"Sleeping {delay//60} minutes {delay%60} seconds before sending...")
-# time.sleep(delay)
 
 # Pick random message
 message = random.choice(lines)
